@@ -126,5 +126,22 @@ public class Auction
         }
 
     }
+
+    /**
+     * Actividad 0061 : Añade un metodo llamado getUnsold.
+     */
+
+    public ArrayList getUnsold()
+    {
+        ArrayList<Lot> noPuja = new ArrayList();
+        for (Lot item : lots)
+        {
+            if (item.getHighestBid() == null){
+
+                noPuja.add(item);
+            }
+
+        }
+        return noPuja;
+    }
 }
-    
